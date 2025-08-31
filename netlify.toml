@@ -1,0 +1,38 @@
+[build]
+  base = "frontend"
+  publish = "build"
+  command = "npm run build"
+  functions = "../netlify/functions"
+
+[build.environment]
+  NODE_VERSION = "18"
+
+[[redirects]]
+  from = "/api/skills/*"
+  to = "/.netlify/functions/skills"
+  status = 200
+
+[[redirects]]
+  from = "/api/projects/"
+  to = "/.netlify/functions/projects"
+  status = 200
+
+[[redirects]]
+  from = "/api/experiences/"
+  to = "/.netlify/functions/experiences"
+  status = 200
+
+[[redirects]]
+  from = "/api/contact/"
+  to = "/.netlify/functions/contact"
+  status = 200
+
+[[redirects]]
+  from = "/api/personal-info/"
+  to = "/.netlify/functions/personal-info"
+  status = 200
+
+[[redirects]]
+  from = "/*"
+  to = "/index.html"
+  status = 200
