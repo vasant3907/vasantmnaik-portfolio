@@ -15,7 +15,7 @@ SECRET_KEY = config('SECRET_KEY', default='django-insecure-your-secret-key-here'
 # SECURITY WARNING: don't run with debug turned on in production!
 DEBUG = config('DEBUG', default=True, cast=bool)
 
-ALLOWED_HOSTS = ['localhost', '127.0.0.1', '0.0.0.0', '.onrender.com']
+ALLOWED_HOSTS = ['localhost', '127.0.0.1', '0.0.0.0', '.onrender.com', '.railway.app', '.up.railway.app']
 
 # Application definition
 INSTALLED_APPS = [
@@ -126,6 +126,8 @@ CORS_ALLOWED_ORIGINS = [
     "http://localhost:3000",
     "http://127.0.0.1:3000",
     "https://*.onrender.com",
+    "https://*.railway.app",
+    "https://*.up.railway.app",
 ]
 
 CORS_ALLOW_CREDENTIALS = True
