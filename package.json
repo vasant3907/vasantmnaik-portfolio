@@ -1,0 +1,13 @@
+{
+  "name": "portfolio-fullstack",
+  "version": "1.0.0",
+  "description": "Portfolio full-stack application",
+  "engines": {
+    "node": "18.x",
+    "npm": "9.x"
+  },
+  "scripts": {
+    "build": "cd frontend && npm install && npm run build",
+    "start": "cd backend && gunicorn portfolio_backend.wsgi:application --bind 0.0.0.0:$PORT"
+  }
+}
