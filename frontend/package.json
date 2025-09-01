@@ -2,6 +2,7 @@
   "name": "vasant-portfolio-frontend",
   "version": "0.1.0",
   "private": true,
+  "homepage": "https://vasant3907.github.io/vasantmnaik-portfolio",
   "dependencies": {
     "@testing-library/jest-dom": "^5.17.0",
     "@testing-library/react": "^13.4.0",

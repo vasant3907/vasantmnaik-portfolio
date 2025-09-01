@@ -1,10 +1,10 @@
 {
   "files": {
-    "main.css": "/static/css/main.9b4ced4a.css",
-    "main.js": "/static/js/main.3eefb498.js",
-    "index.html": "/index.html",
-    "main.9b4ced4a.css.map": "/static/css/main.9b4ced4a.css.map",
-    "main.3eefb498.js.map": "/static/js/main.3eefb498.js.map"
+    "main.css": "/vasantmnaik-portfolio/static/css/main.9b4ced4a.css",
+    "main.js": "/vasantmnaik-portfolio/static/js/main.3eefb498.js",
+    "index.html": "/vasantmnaik-portfolio/index.html",
+    "main.9b4ced4a.css.map": "/vasantmnaik-portfolio/static/css/main.9b4ced4a.css.map",
+    "main.3eefb498.js.map": "/vasantmnaik-portfolio/static/js/main.3eefb498.js.map"
   },
   "entrypoints": [
     "static/css/main.9b4ced4a.css",
