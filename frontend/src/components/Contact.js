@@ -28,7 +28,11 @@ const Contact = () => {
     setError('');
 
     try {
-      await axios.post('/api/contact/', formData);
+      // Simulate form submission (since we're using GitHub Pages)
+      console.log('Contact form submission:', formData);
+      
+      // You can add email service integration here later
+      // For now, just show success message
       setSuccess(true);
       setFormData({ name: '', email: '', subject: '', message: '' });
     } catch (error) {

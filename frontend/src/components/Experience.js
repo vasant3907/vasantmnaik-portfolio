@@ -1,6 +1,6 @@
 import React, { useState, useEffect } from 'react';
 import { motion } from 'framer-motion';
-import axios from 'axios';
+import { experiencesData } from '../data/portfolioData';
 import './Experience.css';
 
 const Experience = () => {
@@ -8,18 +8,9 @@ const Experience = () => {
   const [loading, setLoading] = useState(true);
 
   useEffect(() => {
-    const fetchExperiences = async () => {
-      try {
-        const response = await axios.get('/api/experiences/');
-        setExperiences(response.data);
-        setLoading(false);
-      } catch (error) {
-        console.error('Error fetching experiences:', error);
-        setLoading(false);
-      }
-    };
-
-    fetchExperiences();
+    // Use local data instead of API call
+    setExperiences(experiencesData.results || experiencesData);
+    setLoading(false);
   }, []);
 
   if (loading) {

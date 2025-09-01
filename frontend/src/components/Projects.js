@@ -1,7 +1,7 @@
 import React, { useState, useEffect } from 'react';
 import { motion } from 'framer-motion';
 import { FaGithub, FaExternalLinkAlt, FaShoppingCart, FaCog } from 'react-icons/fa';
-import axios from 'axios';
+import { projectsData } from '../data/portfolioData';
 import './Projects.css';
 
 const Projects = () => {
@@ -9,18 +9,9 @@ const Projects = () => {
   const [loading, setLoading] = useState(true);
 
   useEffect(() => {
-    const fetchProjects = async () => {
-      try {
-        const response = await axios.get('/api/projects/');
-        setProjects(response.data);
-        setLoading(false);
-      } catch (error) {
-        console.error('Error fetching projects:', error);
-        setLoading(false);
-      }
-    };
-
-    fetchProjects();
+    // Use local data instead of API call
+    setProjects(projectsData.results || projectsData);
+    setLoading(false);
   }, []);
 
   const getProjectIcon = (title) => {

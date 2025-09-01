@@ -1,7 +1,7 @@
 import React, { useState, useEffect } from 'react';
 import { motion } from 'framer-motion';
 import { FaCode, FaDatabase, FaCogs, FaTools, FaUsers } from 'react-icons/fa';
-import axios from 'axios';
+import { skillsData } from '../data/portfolioData';
 import './Skills.css';
 
 const Skills = () => {
@@ -9,18 +9,9 @@ const Skills = () => {
   const [loading, setLoading] = useState(true);
 
   useEffect(() => {
-    const fetchSkills = async () => {
-      try {
-        const response = await axios.get('/api/skills/');
-        setSkills(response.data);
-        setLoading(false);
-      } catch (error) {
-        console.error('Error fetching skills:', error);
-        setLoading(false);
-      }
-    };
-
-    fetchSkills();
+    // Use local data instead of API call
+    setSkills(skillsData);
+    setLoading(false);
   }, []);
 
   const getCategoryIcon = (category) => {
