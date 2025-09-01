@@ -11,7 +11,7 @@ const Skills = () => {
   useEffect(() => {
     const fetchSkills = async () => {
       try {
-        const response = await axios.get('/api/skills/by_category/');
+        const response = await axios.get('/api/skills/');
         setSkills(response.data);
         setLoading(false);
       } catch (error) {
